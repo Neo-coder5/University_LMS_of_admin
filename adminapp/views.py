@@ -348,7 +348,6 @@ def student_edit(request,pk):
         actions = request.session.get('actions',[])
         actions += [f"You edited student: {request.POST.get('name')}"]
         request.session['actions'] = actions
-
         return redirect('student_list')
     ctx = {
         "model":model,
